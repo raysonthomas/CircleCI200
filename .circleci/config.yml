@@ -22,10 +22,10 @@ jobs:
     steps:
      - checkout
      - run:
-      name: Giving permissions
-      command: chmod +x mnvw
+        name: Giving permissions
+        command: chmod +x mnvw
      - run:
-      command: ./mvnw test
+        command: ./mvnw test
 
 workflows:
   version: 2.1
