@@ -32,7 +32,7 @@ workflows:
   build-test:
     jobs:
       - build
-      - test_1:
+      - test-1:
           requires:
             - build
 
