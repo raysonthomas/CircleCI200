@@ -12,9 +12,9 @@ jobs:
      - checkout
      - run:
         name: Giving permissions
-     	  command: chmod +x mnvw
+        command: chmod +x mnvw
      - run:
-     	command: ./mvnw -Dmaven.test.skip=true package
+        command: ./mvnw -Dmaven.test.skip=true package
 
   test-1:
     docker:
