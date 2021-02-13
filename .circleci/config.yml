@@ -2,11 +2,7 @@ version: 2.1
 
 orbs:
   node: circleci/node@4.1.0
-  
-nightly:
-  triggers:
-    - cron: "41 8 * * *"
-#     - cron: "0 20 * * 1     "
+
 
 jobs:
 
@@ -45,7 +41,7 @@ workflows:
   nightly:
     triggers:
       - schedule:
-          cron: "55 8 * * *"
+          cron: "5 9 * * *"
           filters:
             branches:
               only:
@@ -56,14 +52,3 @@ workflows:
       - test-1:
           requires:
             - build
-
-  
-
-
-
-
-
-
-
-
-
