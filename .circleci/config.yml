@@ -38,17 +38,17 @@ workflows:
             - build
             
             
-  nightly:
-    triggers:
-      - schedule:
-          cron: "5 9 * * *"
-          filters:
-            branches:
-              only:
-                - master
+#   nightly:
+#     triggers:
+#       - schedule:
+#           cron: "5 9 * * *"
+#           filters:
+#             branches:
+#               only:
+#                 - master
 
-    jobs:
-      - build
-      - test-1:
-          requires:
-            - build
+#     jobs:
+#       - build
+#       - test-1:
+#           requires:
+#             - build
