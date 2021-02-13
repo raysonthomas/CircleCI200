@@ -17,49 +17,49 @@ jobs:
       - run:   
           command: ./mvnw -Dmaven.test.skip=true package
           
-    test-3:
-      docker:
-        - image: cimg/node:12.16
-      steps:
-       - checkout
-       - node/install-packages:
-          override-ci-command: npm install
-       - run:
-          name: Install unitjs
-          command: npm install --save-dev jest
-       - run:
-          name: Install jest
-          command: npm install --save-dev jest
-       - run:
-          command: npm run test 
+  test-3:
+    docker:
+      - image: cimg/node:12.16
+    steps:
+      - checkout
+      - node/install-packages:
+        override-ci-command: npm install
+      - run:
+        name: Install unitjs
+        command: npm install --save-dev jest
+      - run:
+        name: Install jest
+        command: npm install --save-dev jest
+      - run:
+        command: npm run test 
     
-    test-2:
-      docker:
-        - image: cimg/node:12.16
-      steps:
-       - checkout
-       - node/install-packages:
-          override-ci-command: npm install
-       - run:
-          name: Install jest
-          command: npm install --save-dev jest
-       - run:
-          command: npm run test
+  test-2:
+    docker:
+      - image: cimg/node:12.16
+    steps:
+      - checkout
+      - node/install-packages:
+        override-ci-command: npm install
+      - run:
+        name: Install jest
+        command: npm install --save-dev jest
+      - run:
+        command: npm run test
 
-    test-1:
-      docker:
-        - image: circleci/openjdk:stretch
-      steps:
-       - checkout
-       - run:
-          name: Giving permissions
-          command: chmod +x mvnw
-       - run:
-          command: ./mvnw test
+  test-1:
+    docker:
+      - image: circleci/openjdk:stretch
+    steps:
+      - checkout
+      - run:
+        name: Giving permissions
+        command: chmod +x mvnw
+      - run:
+        command: ./mvnw test
 
 workflows:
   version: 2.1
-  
+
   build-test:
     jobs:
       - build
