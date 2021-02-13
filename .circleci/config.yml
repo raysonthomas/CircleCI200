@@ -30,7 +30,7 @@ jobs:
        - run:
           name: Install jest
           command: npm install --save-dev jest
-        - run:
+       - run:
           command: npm run test 
     
     test-2:
@@ -43,7 +43,7 @@ jobs:
        - run:
           name: Install jest
           command: npm install --save-dev jest
-        - run:
+       - run:
           command: npm run test
 
     test-1:
@@ -62,10 +62,10 @@ workflows:
   build-test:
     jobs:
       - build
-       - test-3:
+      - test-3:
           requires:
             - build
-       - test-2:
+      - test-2:
           requires:
             - build
       - test-1:
