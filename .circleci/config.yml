@@ -23,15 +23,15 @@ jobs:
     steps:
       - checkout
       - node/install-packages:
-        override-ci-command: npm install
+          override-ci-command: npm install
       - run:
-        name: Install unitjs
-        command: npm install --save-dev jest
+          name: Install unitjs
+          command: npm install --save-dev jest
       - run:
-        name: Install jest
-        command: npm install --save-dev jest
+          name: Install jest
+          command: npm install --save-dev jest
       - run:
-        command: npm run test 
+          command: npm run test 
     
   test-2:
     docker:
@@ -39,12 +39,12 @@ jobs:
     steps:
       - checkout
       - node/install-packages:
-        override-ci-command: npm install
+          override-ci-command: npm install
       - run:
-        name: Install jest
-        command: npm install --save-dev jest
+          name: Install jest
+          command: npm install --save-dev jest
       - run:
-        command: npm run test
+          command: npm run test
 
   test-1:
     docker:
@@ -52,10 +52,10 @@ jobs:
     steps:
       - checkout
       - run:
-        name: Giving permissions
-        command: chmod +x mvnw
+          name: Giving permissions
+          command: chmod +x mvnw
       - run:
-        command: ./mvnw test
+          command: ./mvnw test
 
 workflows:
   version: 2.1
@@ -71,8 +71,7 @@ workflows:
             - build
       - test-1:
           requires:
-            - build
-            
+            - build            
 #   Scheduled job to run at 9:05 everyday        
 #   nightly:
 #     triggers:
