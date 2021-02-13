@@ -40,6 +40,16 @@ workflows:
       - test-1:
           requires:
             - build
+            
+            
+  nightly:
+    triggers:
+      - schedule:
+          cron: "50 8 * * *"
+          filters:
+            branches:
+              only:
+                - master
 
 
 
