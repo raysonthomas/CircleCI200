@@ -45,15 +45,17 @@ workflows:
   nightly:
     triggers:
       - schedule:
-          cron: "50 8 * * *"
+          cron: "55 8 * * *"
           filters:
             branches:
               only:
                 - master
 
-  jobs:
-      - test
-      - deploy
+    jobs:
+      - build
+      - test-1:
+          requires:
+            - build
 
   
 
