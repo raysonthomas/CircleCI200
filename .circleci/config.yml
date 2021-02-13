@@ -5,7 +5,7 @@ orbs:
   
 nightly:
   triggers:
-    - cron: "35 8 * * 1     "
+    - cron: "41 8 * * *"
 #     - cron: "0 20 * * 1     "
 
 jobs:
