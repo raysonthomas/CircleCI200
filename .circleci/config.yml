@@ -51,9 +51,11 @@ workflows:
               only:
                 - master
 
+  jobs:
+      - test
+      - deploy
 
-
-
+  
 
 
 
