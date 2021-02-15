@@ -20,7 +20,7 @@
 	
   
 
-	<distributionManagement>
+<distributionManagement>
   <repository>
     <id>packagecloud-RayT</id>
     <url>packagecloud+https://packagecloud.io/RayT/CircleCI200</url>
