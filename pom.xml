@@ -23,11 +23,11 @@
 	<distributionManagement>
   <repository>
     <id>packagecloud-RayT</id>
-    <url>packagecloud+https://packagecloud.io/RayT/CIRCLECI200</url>
+    <url>packagecloud+https://packagecloud.io/RayT/CircleCI200</url>
   </repository>
   <snapshotRepository>
     <id>packagecloud-VA</id>
-    <url>packagecloud+https://packagecloud.io/RayT/CIRCLECI200</url>
+    <url>packagecloud+https://packagecloud.io/RayT/CircleCI200</url>
   </snapshotRepository>
 </distributionManagement>
 	
