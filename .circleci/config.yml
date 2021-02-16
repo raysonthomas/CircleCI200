@@ -17,7 +17,7 @@ jobs:
           command: chmod +x mvnw
       - run:   
           command: ./mvnw -Dmaven.test.skip=true package
-      -slack/status:
+      - slack/status:
           failure_message: Build Failed
           success_message: Build Success
           
