@@ -60,12 +60,7 @@ jobs:
           command: chmod +x mvnw
       - run:
           command: ./mvnw test
-          
-#       - slack/notify:
-#           color: '#555'
-#           mentions: 'USER123'
-#           message: Customized message
-#           webhook: webhook
+
           
 
 workflows:
