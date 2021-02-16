@@ -17,6 +17,9 @@ jobs:
           command: chmod +x mvnw
       - run:   
           command: ./mvnw -Dmaven.test.skip=true package
+      -slack/status:
+          failure_message: Build Failed
+          success_message: Build Success
           
   test-3:
     docker:
@@ -57,6 +60,13 @@ jobs:
           command: chmod +x mvnw
       - run:
           command: ./mvnw test
+          
+      -slack/notify:
+          color: '#555'
+          mentions: 'USER123'
+          message: Customized message
+          webhook: webhook
+          
 
 workflows:
   version: 2.1
