@@ -61,7 +61,7 @@ jobs:
       - run:
           command: ./mvnw test
           
-      -slack/notify:
+      - slack/notify:
           color: '#555'
           mentions: 'USER123'
           message: Customized message
