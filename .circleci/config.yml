@@ -60,8 +60,7 @@ jobs:
           command: chmod +x mvnw
       - run:
           command: ./mvnw test
-
-          
+         
 
 workflows:
   version: 2.1
