@@ -2,7 +2,7 @@
 
 #### This is will help you to build , test , deploy and post-deploy check a java spring application using maven via Circle Ci.
 
-Step 1) Uplaod the complete java project on Github. 
+Step 1) Uplaod the complete java project on Github. .
 
 You can refer to this to build a basic spring application - https://spring.io/guides/gs/spring-boot/#initial
 
